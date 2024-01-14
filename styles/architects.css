@@ -61,6 +61,7 @@ p {
 .header {
   width: 100%;
   background: rgba(255, 144, 14, 0.1);
+  margin-bottom: 120px;
 }
 
 .header_area {
@@ -76,8 +77,9 @@ p {
   margin-bottom: 20px;
 }
 
-.nav_title {
+.section_title {
   font-size: 3rem;
+  margin-bottom: 20px;
 }
 
 .navigation_area > ul {
@@ -91,9 +93,6 @@ p {
   font-weight: 500;
 }
 
-.banner_area {
-}
-
 .banner_content {
   width: 60%;
   margin: 0 auto;
@@ -104,19 +103,98 @@ p {
   font-size: 4rem;
 }
 
+/* Main areas style */
+.team_area {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  column-gap: 10%;
+  margin-bottom: 120px;
+}
+
+.img_area {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.team_content {
+  flex: 1;
+}
+
+.features {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 120px;
+  display: flex;
+  column-gap: 10%;
+}
+
+.features_content {
+  flex: 1;
+}
+
+.features_img {
+  flex: 1;
+}
+
+.features_content .section_title {
+  border-left: 5px solid #ff900e;
+  padding-left: 30px;
+}
+
+.features_item {
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+  margin-bottom: 20px;
+  padding: 30px;
+}
+
+.item_title {
+  color: #131313;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.experience_badge {
+  width: 180px;
+  border-radius: 8px;
+  background: #ff900e;
+  text-align: center;
+  padding: 15px;
+  position: relative;
+  bottom: 60px;
+  left: -60px;
+}
+
+.experience_badge h2 {
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+.experience_badge p {
+  color: #fff;
+}
+
 /* Mobile device responsive */
 
 @media screen and (max-width: 576px) {
   .header_area {
-    width: 100%;
-    padding: 20px;
+    width: 90%;
   }
 
-  .navigation_area {
+  .navigation_area,
+  .team_area,
+  .features {
     flex-direction: column;
   }
-  .nav_title {
-    font-size: 2.5rem;
+
+  .section_title {
+    font-size: 2.3rem;
   }
 
   .banner_content {
@@ -125,7 +203,76 @@ p {
 
   .banner_title {
     width: 100%;
-    font-size: 2.1rem;
+    font-size: 2.3rem;
     margin-bottom: 10px;
+  }
+
+  .team_area {
+    width: 90%;
+  }
+
+  .img_area {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 30px;
+    order: 2;
+  }
+
+  .team_content {
+    text-align: center;
+  }
+
+  .features {
+    width: 90%;
+  }
+
+  .experience_badge {
+    left: 0px;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  .header_area {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .section_title {
+    font-size: 2.8rem;
+  }
+  .banner_content {
+    width: 100%;
+  }
+
+  .banner_title {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+  }
+
+  .team_area {
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .img_area {
+    gap: 18px;
+    margin-bottom: 50px;
+  }
+
+  .team_content {
+    text-align: center;
+  }
+
+  .features {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .experience_badge {
+    left: -50px;
+  }
+
+  .features_content {
+    order: 2;
   }
 }
