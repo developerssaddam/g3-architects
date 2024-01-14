@@ -228,6 +228,21 @@ p {
   gap: 30px;
 }
 
+/* footer style */
+.footer {
+  width: 80%;
+  border-radius: 8px;
+  background: #fff4e7;
+  margin: 0 auto 30px;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer p {
+  color: #424242;
+  font-size: 20px;
+}
+
 /* Mobile device responsive */
 
 @media screen and (max-width: 576px) {
