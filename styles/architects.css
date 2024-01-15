@@ -2,9 +2,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap");
 
-*,
-*::after,
-*::before {
+* {
   font-family: "Work Sans", sans-serif;
   margin: 0;
   padding: 0;
@@ -53,11 +51,8 @@ p {
   margin: 30px 0px;
 }
 
-.pColor {
-  color: #424242;
-}
-
 /* Header style here */
+
 .header {
   width: 100%;
   background: rgba(255, 144, 14, 0.1);
@@ -77,20 +72,37 @@ p {
   margin-bottom: 20px;
 }
 
-.section_title {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-.navigation_area > ul {
+.menu_area {
   display: flex;
+  align-items: center;
   column-gap: 25px;
 }
 
-.navigation_area ul li a {
+.menu {
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+}
+
+.navigation_area .menu li a {
   color: #424242;
   font-size: 1.2rem;
   font-weight: 500;
+}
+
+.toggle_icom {
+  border: none;
+  font-size: 20px;
+  outline: none;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+}
+
+.section_title {
+  font-size: 3rem;
 }
 
 .banner_content {
@@ -250,7 +262,14 @@ p {
     width: 90%;
   }
 
-  .navigation_area,
+  .toggle_icom {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+  }
+
   .team_area,
   .features {
     flex-direction: column;
@@ -293,6 +312,10 @@ p {
     left: 0px;
   }
 
+  /* .facts{
+    width: 90%;
+  } */
+
   .fact_item_area {
     grid-template-columns: 1fr;
     justify-items: center;
@@ -307,6 +330,14 @@ p {
   .header_area {
     width: 90%;
     margin: 0 auto;
+  }
+
+  .toggle_icom {
+    display: block;
+  }
+
+  .menu {
+    display: none;
   }
 
   .section_title {
@@ -352,6 +383,10 @@ p {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
   }
+
+  /* .sponsors{
+    width: 90%;
+  } */
 
   .sponsor_area {
     grid-template-columns: repeat(3, 1fr);
